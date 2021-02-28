@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="pmfplayer"
+	ProjectGUID="{8C57944E-4979-449C-B7B3-495FB9BAFFCB}"
+	RootNamespace="pmfPlayer"
+	Keyword="MakeFileProj"
+	>
+	<Platforms>
+		<Platform
+			Name="Win32"
+		/>
+	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="$(ConfigurationName)"
+			IntermediateDirectory="$(ConfigurationName)"
+			ConfigurationType="0"
+			>
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="make kxploit"
+				ReBuildCommandLine="make clean kxploit"
+				CleanCommandLine="make clean"
+				Output="mpeg.elf"
+				PreprocessorDefinitions="WIN32;_DEBUG"
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged=""
+			/>
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory=".\"
+			IntermediateDirectory=".\"
+			ConfigurationType="0"
+			BuildLogFile=""
+			>
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="make 2&gt;&amp;1 | sed -e &apos;s/\([^:]*\):\([0-9][0-9]*\)\(.*\)/\1(\2)\3/&apos;"
+				ReBuildCommandLine="make clean all 2&gt;&amp;1 | sed -e &apos;s/\([^:]*\):\([0-9][0-9]*\)\(.*\)/\1(\2)\3/&apos;"
+				CleanCommandLine="make clean"
+				Output="mpeg.elf"
+				PreprocessorDefinitions="__PSP__;NDEBUG"
+				IncludeSearchPath="C:\Cygwin\usr\local\pspdev\psp\sdk\include\libc;C:\Cygwin\usr\local\pspdev\psp\sdk\include;&quot;C:\Cygwin\usr\local\pspdev\include\c++&quot;;C:\Cygwin\usr\local\pspdev\include;C:\Cygwin\usr\local\pspdev\psp\include;$(NOINHERIT)"
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged=""
+			/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter
+			Name="Source Files"
+			Filter="cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx"
+			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
+			>
+			<File
+				RelativePath="src\audio.cpp"
+				>
+			</File>
+			<File
+				RelativePath="src\decoder.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\src\main.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\src\pmfplayer.cpp"
+				>
+			</File>
+			<File
+				RelativePath="src\reader.cpp"
+				>
+			</File>
+			<File
+				RelativePath="src\video.cpp"
+				>
+			</File>
+		</Filter>
+		<Filter
+			Name="Header Files"
+			Filter="h;hpp;hxx;hm;inl;inc;xsd"
+			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
+			>
+			<File
+				RelativePath="src\audio.h"
+				>
+			</File>
+			<File
+				RelativePath="src\decoder.h"
+				>
+			</File>
+			<File
+				RelativePath=".\src\pmfplayer.h"
+				>
+			</File>
+			<File
+				RelativePath="src\reader.h"
+				>
+			</File>
+			<File
+				RelativePath="src\video.h"
+				>
+			</File>
+		</Filter>
+		<Filter
+			Name="Resource Files"
+			Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav"
+			UniqueIdentifier="{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}"
+			>
+		</Filter>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>
